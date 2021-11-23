@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+        aria-controls="offcanvasExample">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a routerLink="/home" class="nav-link active" aria-current="page" href="#">Anasayfa</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/users" class="nav-link" href="#">Kullanıcılar</a>
+          </li>
+          <li class="nav-item  dropdown">
+            <a class="nav-link dropdown-toggle" routerLink="/design" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Düzenle
+            </a>
+            <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+              <li><a routerLink="/categories" class="dropdown-item list-group-item-action"  >Kategoriler</a></li>
+              <li><a routerLink="/userImages" class="dropdown-item list-group-item-action"  >Kullanıcı Resimleri</a></li>
+              <li><a routerLink="/blogImages" class="dropdown-item list-group-item-action"  >Blog Resimleri</a></li>
+              <li><a routerLink="/productImages" class="dropdown-item list-group-item-action"  >Ürün Resimleri</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><a routerLink="/userOperationClaims" class="dropdown-item " >Kullanıcı Yetkileri</a></li>
+            </ul>
+          </li>
+          <li class="nav-item" style="margin-left: 20rem">
+            <a class="nav-link disabled">E-MyBlog</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-light me-2" type="submit">Search</button>
+          <button routerLink="/register" class="btn btn-outline-light" type="submit">
+            Register
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="offcanvas offcanvas-start bg-dark " id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-body">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-muted" id="offcanvasExampleLabel">
+              Offcanvas
+            </h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+      
+          <div class="list-group" id="list-tab" role="tablist">
+            <a routerLink="/home" class="
+                      list-group-item list-group-item-action list-group-item-dark
+                      active
+                    " data-bs-toggle="list">Anasayfa</a>
+            <a routerLink="/users" class="list-group-item list-group-item-action list-group-item-dark"
+              data-bs-toggle="list">Kullanıcılar</a>
+            <a routerLink="/blogs" class="list-group-item list-group-item-action list-group-item-dark"
+              data-bs-toggle="list">Bloglar</a>
+              <a routerLink="/product" class="list-group-item list-group-item-action list-group-item-dark"
+              data-bs-toggle="list">Ürünler</a>
+            <a routerLink="/setting" class="list-group-item list-group-item-action list-group-item-dark"
+              data-bs-toggle="list">Ayarlar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
