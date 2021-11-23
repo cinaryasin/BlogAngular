@@ -4,6 +4,9 @@ import { LoginModel } from '../models/loginModel';
 import { SingleResponseModel } from '../models/singleResponseModel';
 import { TokenModel } from '../models/tokenModel';
 import { RegisterModel } from '../models/registerModel';
+import { ListResponseModel } from '../models/listResponseModel';
+import { Observable } from 'rxjs';
+import { User } from '../models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +21,9 @@ export class AuthService {
   }
   register(user: RegisterModel){
     return this.httpClient.post<SingleResponseModel<TokenModel>>(this.apiUrl + '/register', user);
+  }
+  getAllUsers():Observable<ListResponseModel<User>>{
+    return this.httpClient.get<ListResponseModel<User>>(this.apiUrl + '/getAll');
   }
 
   isAuthenticated() {
